@@ -23,6 +23,40 @@ describe CommonHack do
 		end
 
 		#fetch will only work on a vaild object, so We do not need to check for blanks
-		
+
 	end
+
+	describe "#check_accessors" do
+
+		it "returns the username when asked" do
+			correct = "ehzhang"
+			expect(@app.username).to eql correct
+		end
+
+		it "returns the email when asked directly" do
+			correct = "ehzhang@mit.edu"
+			expect(@app.email).to eql correct
+		end
+
+		it "returns the lastUpdated date when asked" do
+			correct = "Sat, 26 Jul 2014 01:55:43 GMT"
+			expect(@app.lastUpdated).to eql correct
+		end
+
+	end
+
+
+	describe "#check_bio" do
+
+		it "returns the correct email when asked" do
+			correct = "ehzhang@mit.edu"
+			expect(@app.bio("email")).to eql correct
+		end
+
+		it "returns the correct phone when asked" do
+			correct = "908-798-1998"
+			expect(@app.bio("phone")).to eql correct
+		end
+	end
+	
 end

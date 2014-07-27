@@ -6,7 +6,7 @@ require 'open-uri'
 
 class CommonHack
 
-	#makes these three fields accesiable via dot notation
+	#makes these three fields accessable via dot notation
 
 	attr_reader :username,:email,:lastUpdated
 
@@ -80,30 +80,14 @@ class CommonHack
 
 	end
 
-	# A method to help extract the bio part of the application
-	# "fields", returns a list of fields
+	# These fields return arrays so they pass the array to the user,
+	# rather than looping through them
 
 	def education(method)
 
-		if method != "fields"
-
-			return fetch("education",method)
-
-		else
-
-			return [
-	            "institution",
-	            "areas",
-	            "studyType",
-	            "start",
-	            "end"
-			]
-
-		end
+		return @result["education"]
 	end
 
-
-	# work is an array so we just return that array
 
 	def work()
 
