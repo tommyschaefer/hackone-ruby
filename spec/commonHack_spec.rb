@@ -7,6 +7,20 @@ describe CommonHack do
 		@app = CommonHack.new("test.json")
 	end
 
+
+	describe "#initialize" do
+
+		it "retrives a correct file address and correct url and creates the commonApp object" do
+
+			username ="ehzhang"
+			@app_file = CommonHack.new("test.json")
+			@app_web = CommonHack.new("http://pastebin.com/raw.php?i=FSBr9BCK")
+			expect(@app_file.username).to eql username
+			expect(@app_web.username).to eql username
+		end
+
+	end
+
 	describe "#fetch_item" do
 
 		it "gives an error message if the method doesn't exist" do
@@ -58,5 +72,5 @@ describe CommonHack do
 			expect(@app.bio("phone")).to eql correct
 		end
 	end
-	
+
 end

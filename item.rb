@@ -6,7 +6,7 @@ require 'open-uri'
 
 class CommonHack
 
-	#makes these three fields accessable via dot notation
+	#makes these three fields accessable via dot notation     
 
 	attr_reader :username,:email,:lastUpdated
 
@@ -17,9 +17,8 @@ class CommonHack
 
 
 		if url.include? "http://" or url.include? "https://"
-
 			body = open(url)
-			contents = open(body.read)
+			contents = body.read
 
 		else
 			#its a local file, so use File.Read
