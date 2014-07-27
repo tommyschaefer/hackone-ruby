@@ -7,7 +7,7 @@ puts "email: #{app.email}"
 
 puts ""
 
-app.work.each do |job|
+app.work().each do |job|
 	puts "company: #{job["company"]}"
 	puts "position: #{job["position"]}"
 end
