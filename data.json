@@ -1,0 +1,88 @@
+{
+    "username": "ehzhang",
+    "email": "ehzhang@mit.edu",
+    "lastUpdated": "Sat, 26 Jul 2014 01:55:43 GMT",
+    "bio": {
+        "firstName": "Edwin",
+        "lastName": "Zhang",
+        "gender": "male",
+        "email": "ehzhang@mit.edu",
+        "phone": "908-798-1998",
+        "dietaryRestrictions": "None",
+        "summary": "Maybe a couple sentences. I'm a design-focused full stack developer.",
+        "location": {
+            "city": "Cambridge",
+            "countryCode": "US",
+            "region": "Somewhere",
+            "state": "MA"
+        },
+        "websites": {
+            "personal": "http://ehzhang.ninja",
+            "facebook": "https://www.facebook.com/edwinhzhang",
+            "twitter": "ehzhang",
+            "github": "ehzhang",
+            "linkedin": "<yourlinkedin>",
+            "dribbble": "yourdribbble",
+            "blog": "<your blog site>"
+        },
+        "resume": "<linktoyourresume>",
+        "picture": "<linktoyourpicture>"
+    },
+    "education": [
+        {
+            "institution": "MIT",
+            "areas": [
+                "Computer Science"
+            ],
+            "studyType": "Bachelor's",
+            "start": "2012",
+            "end": "2016"
+        }
+    ],
+    "work": [
+        {
+            "company": "Groupon",
+            "position": "Software Engineering Intern",
+            "start": "June 2014",
+            "end": "Aug 2014",
+            "description": "Worked on user interfaces for financial engineering, etc."
+        }
+    ],
+    "hackathons": [
+        {
+            "name": "Greylock Hackfest",
+            "season": "Summer",
+            "year": "2014",
+            "awards": [
+                "Finalist"
+            ],
+            "project": {
+                "name": "sense.js",
+                "link": "http://sense-js.jit.su",
+                "image": "<link to your image>",
+                "description": "An HTML5 Interaction Library",
+                "technologies": [
+                    "Javascript",
+                    "HTML5",
+                    "Node.js",
+                    "Socket.IO"
+                ]
+            }
+        }
+    ],
+    "projects": [
+        {
+            "name": "commonhack",
+            "description": "A common hackathon application/hacker showcase",
+            "link": "http://commonhack.org",
+            "image": "<link to your image>"
+        }
+    ],
+    "skills": [
+        "Javascript",
+        "HTML",
+        "CSS",
+        "Python",
+        "Node"
+    ]
+}
