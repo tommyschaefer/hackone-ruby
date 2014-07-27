@@ -6,17 +6,28 @@ require 'open-uri'
 
 class CommonHack
 
+	#makes these three fields accesiable via dot notation
+
 	attr_reader :username,:email,:lastUpdated
+
+
+	#intitalizes the class
 
 	def initialize(url)
 
 
-		# handle the errors for an invalid url 
+		if url.include? "http://" or url.include? "https://"
 
-		file = File.open("data.json", "rb")
-		contents = file.read
+			body = open(url)
+			contents = open(body.read)
+
+		else
+			#its a local file, so use File.Read
+			file = File.open("data.json", "rb")
+			contents = file.read
+		end
+
 		@result = JSON.parse(contents)
-
 
 		#make the  basic first level info accessible
 		@username = @result["username"]
@@ -24,6 +35,10 @@ class CommonHack
 		@lastUpdated = @result["lastUpdated"]
 
 	end
+
+
+	# A helper method. All the names methods use it to
+	# interact with the named method
 
 	def fetch(parent,method)
 
@@ -36,9 +51,13 @@ class CommonHack
 
 	end
 
+
+	# A method to help extract the bio part of the application
+	# "fields", returns a list of fields
+
 	def bio(method)
 
-		if method != "all"
+		if method != "fields"
 
 			return fetch("bio",method)
 
@@ -61,13 +80,51 @@ class CommonHack
 
 	end
 
+	# A method to help extract the bio part of the application
+	# "fields", returns a list of fields
+
 	def education(method)
 
-		if method != "all"
+		if method != "fields"
+
+			return fetch("education",method)
+
+		else
+
+			return [
+	            "institution",
+	            "areas",
+	            "studyType",
+	            "start",
+	            "end"
+			]
+
+		end
+	end
 
 
+	# work is an array so we just return that array
 
+	def work()
 
+		return @result["work"]
+	end 
+
+	# hackathons is the same thing
+
+	def hackathons()
+
+		return @result["hackathons"]
+	end
+
+	def projects()
+
+		return @result["projects"]
+	end
+
+	def skills()
+
+		return @result["skills"]
 	end
 
 end
