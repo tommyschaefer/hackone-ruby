@@ -73,4 +73,34 @@ describe CommonHack do
 		end
 	end
 
+  describe "#education" do
+    it "returns the correct educational experiences" do
+      expect(@app.education).to eq [{"institution"=>"MIT", "areas"=>["Computer Science"], "studyType"=>"Bachelor's", "start"=>"2012", "end"=>"2016"}]
+    end
+  end
+
+  describe "#work" do
+    it "returns the correct work experience" do
+      expect(@app.work).to eq [{"company"=>"Groupon", "position"=>"Software Engineering Intern", "start"=>"June 2014", "end"=>"Aug 2014", "description"=>"Worked on user interfaces for financial engineering, etc."}]
+    end
+  end
+
+  describe "#hackathons" do
+    it "returns the correct hackathons" do
+      expect(@app.hackathons).to eq [{"name"=>"Greylock Hackfest", "season"=>"Summer", "year"=>"2014", "awards"=>["Finalist"], "project"=>{"name"=>"sense.js", "link"=>"http://sense-js.jit.su", "image"=>"<link to your image>", "description"=>"An HTML5 Interaction Library", "technologies"=>["Javascript", "HTML5", "Node.js", "Socket.IO"]}}]
+    end
+  end
+
+  describe "#projects" do
+    it "returns the correct projects" do
+      expect(@app.projects).to eq [{"name"=>"commonhack", "description"=>"A common hackathon application/hacker showcase", "link"=>"http://commonhack.org", "image"=>"<link to your image>"}]
+    end
+  end
+
+  describe "#skills" do
+    it "returns the correct skills" do
+      expect(@app.skills).to eq ["Javascript", "HTML", "CSS", "Python", "Node"]
+    end
+  end
+
 end

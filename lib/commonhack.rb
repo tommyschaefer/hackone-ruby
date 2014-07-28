@@ -79,35 +79,12 @@ class CommonHack
 
 	end
 
-	# These fields return arrays so they pass the array to the user,
-	# rather than looping through them
-
-	def education(method)
-
-		return @result["education"]
-	end
-
-
-	def work()
-
-		return @result["work"]
-	end 
-
-	# hackathons is the same thing
-
-	def hackathons()
-
-		return @result["hackathons"]
-	end
-
-	def projects()
-
-		return @result["projects"]
-	end
-
-	def skills()
-
-		return @result["skills"]
-	end
-
+  def method_missing(method, *args, &block)
+    attr = method.to_s
+    if @result
+      @result[attr]
+    else
+      super
+    end
+  end
 end
