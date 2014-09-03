@@ -1,7 +1,8 @@
-require 'commonhack'
+require 'hackone'
 
+HackOne.api_key = ""
 
-app = CommonHack.new("spec/test.json")
+app = HackOne.new("spec/test.json")
 puts "username: #{app.username}"
 puts "email: #{app.email}"
 

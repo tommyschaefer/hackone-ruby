@@ -1,13 +1,13 @@
-### CommonHack Ruby Gem
+### HackOne Ruby Gem
 
-This is a tool for parsing hacker resumes in the CommonHack JSON format. It provides a simple and easy way to extract information from the JSON feed.
+This is a tool for parsing hacker resumes in the CommonHack JSON format, with a few adjustments made from the original [library made for CommonHack by Marcus Yearwood](https://github.com/myearwood/commonhack). It provides a simple and easy way to extract information from the JSON feed.
 
 ### Installation
 
 To install this gem, download it from the RubyGems repository.
 
 ```
-gem install commonhack
+gem install hackone
 ```
 
 ### Usage
@@ -15,8 +15,15 @@ gem install commonhack
 Use the gem by creating a CommonHack object. This can be created using an external URL or a file on the system. Both of the examples below are acceptable.
 
 ```
-app = CommonHack.new("file.json")
-app = CommonHack.new("http://externalurl.com/data.json")
+app = HackOne.parse("file.json")
+app = HackOne.parse("http://www.hackone.co/bilawal.json")
+app = HackOne.parse("http://externalurl.com/data.json")
+```
+
+Configure your API key (optional) to have access to private profiles. These can be obtained by emailing bilawal@hackcard.org with your hackathon details.
+
+```
+HackOne.api_key = ""
 ```
 
 Once you have created the app object, you can start accessing the information form the application. Basic information can be accessed using dot notation.
@@ -24,6 +31,8 @@ Once you have created the app object, you can start accessing the information fo
 ````
 puts app.username
 puts app.email
+puts app.shirtSize
+puts app.public
 puts app.lastUpdated
 
 ``` 
@@ -55,8 +64,3 @@ end
 ### License
 
 MIT License
-
-
-### Additional notes
-
-This code will evolve if/as the CommonHack JSON spec evolves. I welcome any feedback you have :)

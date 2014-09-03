@@ -1,66 +1,69 @@
 {
-    "username": "ehzhang",
-    "email": "ehzhang@mit.edu",
-    "lastUpdated": "Sat, 26 Jul 2014 01:55:43 GMT",
+    "username": "bilawalhameed",
+    "email": "11026592@stu.mmu.ac.uk",
+    "lastUpdated": "Sun, 31 Aug 2014 21:55:43 GMT",
     "bio": {
-        "firstName": "Edwin",
-        "lastName": "Zhang",
+        "firstName": "Bilawal",
+        "lastName": "Hameed",
         "gender": "male",
-        "email": "ehzhang@mit.edu",
-        "phone": "908-798-1998",
+        "email": "11026592@stu.mmu.ac.uk",
+        "phone": "+447000800900",
         "dietaryRestrictions": "None",
-        "summary": "Maybe a couple sentences. I'm a design-focused full stack developer.",
+        "summary": "Maybe a couple sentences. I'm a software engineer and entrepreneur.",
         "location": {
-            "city": "Cambridge",
-            "countryCode": "US",
-            "region": "Somewhere",
-            "state": "MA"
+            "city": "Manchester",
+            "countryCode": "GB",
+            "region": "Greater Manchester",
+            "state": ""
         },
         "websites": {
-            "personal": "http://ehzhang.ninja",
-            "facebook": "https://www.facebook.com/edwinhzhang",
-            "twitter": "ehzhang",
-            "github": "ehzhang",
-            "linkedin": "<yourlinkedin>",
-            "dribbble": "yourdribbble",
-            "blog": "<your blog site>"
+            "personal": "http://bilaw.al",
+            "facebook": "https://www.facebook.com/home.pp",
+            "twitter": "bilawalhameed",
+            "github": "bih",
+            "linkedin": "http://www.linkedin.com/in/bilawalhameed",
+            "dribbble": "",
+            "blog": "http://bilaw.al"
         },
+
         "resume": "<linktoyourresume>",
-        "picture": "<linktoyourpicture>"
+        "picture": ""
     },
     "education": [
         {
-            "institution": "MIT",
+            "institution": "Manchester Metropolitan University",
             "areas": [
                 "Computer Science"
             ],
             "studyType": "Bachelor's",
-            "start": "2012",
-            "end": "2016"
+            "start": "2011",
+            "end": "2015"
         }
     ],
     "work": [
         {
-            "company": "Groupon",
+            "company": "Example Company",
             "position": "Software Engineering Intern",
-            "start": "June 2014",
-            "end": "Aug 2014",
-            "description": "Worked on user interfaces for financial engineering, etc."
+            "start": "May 2012",
+            "end": "September 2012",
+            "description": "Helped them build X and improve X over the summer."
         }
     ],
     "hackathons": [
         {
-            "name": "Greylock Hackfest",
+            "name": "Yo NYC Hackathon",
             "season": "Summer",
             "year": "2014",
             "awards": [
-                "Finalist"
+                "Judge's Choice",
+                "Most Popular"
             ],
             "project": {
-                "name": "sense.js",
-                "link": "http://sense-js.jit.su",
-                "image": "<link to your image>",
-                "description": "An HTML5 Interaction Library",
+                "name": "YoAuth",
+                "link": "http://yoauth.herokuapp.com",
+                "image": "http://yoauth.herokuapp.com/logo.png",
+                "repository": "http://github.com/bih/yoauth",
+                "description": "A simple authentication platform built on Yo",
                 "technologies": [
                     "Javascript",
                     "HTML5",
@@ -72,17 +75,16 @@
     ],
     "projects": [
         {
-            "name": "commonhack",
-            "description": "A common hackathon application/hacker showcase",
-            "link": "http://commonhack.org",
-            "image": "<link to your image>"
+            "name": "jquery.markdown.js",
+            "description": "A simple Markdown editor written in JavaScript",
+            "link": "http://github.com/bih/jquery.markdown.js",
+            "image": ""
         }
     ],
     "skills": [
         "Javascript",
+        "Ruby",
         "HTML",
-        "CSS",
-        "Python",
-        "Node"
+        "CSS"
     ]
 }
