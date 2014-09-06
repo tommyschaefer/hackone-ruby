@@ -1,1 +1,2 @@
-require_relative "../lib/commonhack"
+require 'rspec/its'
+require_relative '../lib/hackone'
