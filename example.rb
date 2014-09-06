@@ -1,14 +1,14 @@
 require 'hackone'
 
-HackOne.api_key = ""
+HackOne.api_key = ''
 
-app = HackOne.new("spec/test.json")
+app = HackOne.new('spec/test.json')
 puts "username: #{app.username}"
 puts "email: #{app.email}"
 
-puts ""
+puts ''
 
-app.work().each do |job|
-	puts "company: #{job["company"]}"
-	puts "position: #{job["position"]}"
+app.work.each do |job|
+  puts "company: #{job["company"]}"
+  puts "position: #{job["position"]}"
 end
