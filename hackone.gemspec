@@ -10,4 +10,9 @@ Gem::Specification.new do |s|
   s.homepage    =
     'http://github.com/hackcard/hackone-ruby'
   s.license       = 'MIT'
+
+  s.add_development_dependency 'bundler'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'rspec-its'
 end
