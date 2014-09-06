@@ -117,11 +117,12 @@ class HackOne
   private
 
   def cleanse(h)
-    nh = {} if h.is_a? Hash
-    nh = [] if h.is_a? Array
-    nh = h if nh.nil?
-    h.each { |k, v| nh[k.to_sym] = cleanse(v) } if h.is_a? Hash
-    h.each { |k| nh.push(cleanse(k)) } if h.is_a? Array
-    nh
+    if h.is_a?(Hash)
+      h.reduce({}) { |i, (k, v)| i[k.to_sym] = cleanse(v); i }
+    elsif h.is_a?(Array)
+      h.map { |e| cleanse(e) }
+    else
+      h
+    end
   end
 end
